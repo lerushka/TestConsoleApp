@@ -22,8 +22,20 @@ namespace app_valerka
             string input = GetInput();
             Console.WriteLine(input);
 
+            string[] aa = SplitStr(input);
+            for (int i = 0; i < aa.Length; i++)
+            {
+                Console.WriteLine(aa[i]);
+            }
+
             //задержка
             Console.ReadKey();
+        }
+        static string[] SplitStr(string s)
+        {
+            string[] arr;
+            arr = s.Split(new []{' '}, StringSplitOptions.RemoveEmptyEntries);
+            return arr;
         }
     }
 }
